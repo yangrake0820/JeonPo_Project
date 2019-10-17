@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//내장객체
+//window - location
+//     - history
+//     - document - image,link,layer,...
+//                - form - text, password, textarea
+//                       - checkbox, radio
+//                       - select - option
+
+// window.document.images[0].변수   document.images[0].src
+// document.images[0].border   document.images[0].width
+// document.images[0].height
+
+// window.document.images[0].함수()
+function fun1() {
+// 	alert(document.images[0].src);
+// 	alert(document.images[0].width);
+// 	alert(document.images[0].height);
+// 	alert(document.images[0].border);
+// 	document.images[0].src="2.jpg";
+	alert(document.img1.src);
+	alert(document.img1.width);
+	alert(document.img1.height);
+	alert(document.img1.border);
+	document.img1.src="2.jpg";
+}
+function fun2() {
+	// 두번째 이미지를  src 를 4.jpg 변경
+	// 두번째 이미지를 테두리선 두께  5 변경
+// 	document.images[1].src="4.jpg";
+// 	document.images[1].border=5;
+	document.img2.src="4.jpg";
+	document.img2.border=5;
+}
+function fun3() {
+	// 세번째이미지(이름 img3) 이미지 너비 높이 변경 
+	document.img3.width=500;
+	document.img3.height=300;
+}
+// fun4() img4 src  5.jpg 변경
+// fun5() img4 src  4.jpg 변경
+function fun4() {
+	document.img4.src="5.jpg";
+}
+function fun5() {
+	document.img4.src="4.jpg";
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js2/test5.html</h1>
+<img src="1.jpg" width="300"  height="400" border="2" name="img1">
+<input type="button" value="이미지정보" onclick="fun1()">
+<img src="2.jpg" name="img2">
+<input type="button" value="이미지변경" onclick="fun2()">
+<img src="3.jpg" name="img3" onclick="fun3()">
+<img src="4.jpg" name="img4" onmouseover="fun4()" onmouseout="fun5()">
+</body>
+</html>

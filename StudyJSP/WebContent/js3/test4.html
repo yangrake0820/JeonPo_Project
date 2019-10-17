@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//window - location
+//       - history
+//       - document - image,link,layer,...
+//                  - form - text, password, textarea
+//                         - checkbox, radio
+//                         - select                   - option
+
+// window.document.fr.select이름.변수
+//        document.fr.se.length    document.fr.se.name
+//        document.fr.se.type
+//        document.fr.se.selectedIndex => 0/1/2
+//        document.fr.se.options
+
+//  window.document.fr.se.options[0].변수
+//         document.fr.se.options[0].value
+//         document.fr.se.options[0].text
+//         document.fr.se.options[0].selected
+//           0 번째 선택되어지면 true/아니면 false
+
+// window.document.fr.select이름.함수()
+//        document.fr.se.focus()
+//        document.fr.se.blur()
+function fun1() {
+// 	alert(document.fr.se.length);
+// 	alert(document.fr.se.name);
+// 	alert(document.fr.se.type);
+// 	alert(document.fr.se.selectedIndex);
+// 	document.fr.se.focus();
+// 	document.fr.se.blur();
+	alert(document.fr.se.options[0].value);
+	alert(document.fr.se.options[0].text);
+	alert(document.fr.se.options[0].selected);	
+}
+function fun2() {
+	//  selectedIndex   selected  둘중 하나 사용
+	// 첫번째 목록이 선택이 되어지면
+// 	if(document.fr.se.selectedIndex==0){
+// 		// 과목목록을 선택하세요
+// 		alert("과목목록을 선택하세요");
+// 		// 목록상자에 포커스
+// 		document.fr.se.focus();
+// 		// 함수 호출한 곳으로 되돌아감
+// 		return;
+// 	}
+	if(document.fr.se.options[0].selected==true){
+		// 과목목록을 선택하세요
+		alert("과목목록을 선택하세요");
+		// 목록상자에 포커스
+		document.fr.se.focus();
+		// 함수 호출한 곳으로 되돌아감
+		return;
+	}
+	// a.jsp 전송 submit()	
+	document.fr.submit();
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js3/test4.html</h1>
+<form action="a.jsp" method="post" name="fr">
+<select name="se">
+    <option value="">선택하세요</option>
+	<option value="java">자바</option>
+	<option value="oracle">오라클</option>
+	<option value="web">웹</option>
+</select>
+<input type="button" value="목록상자 정보" onclick="fun1()">
+<input type="button" value="목록상자 제어" onclick="fun2()">
+</form>
+</body>
+</html>

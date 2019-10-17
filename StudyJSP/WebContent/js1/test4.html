@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+function funname1() {
+	alert("안녕하세요 홍길동입니다.");
+	return;
+}
+function funname2(a,b) {
+	// 첫번째 받은수
+	alert("첫번째 받은수 :"+a);
+	// 10
+	//alert(a);
+	// 두번째 받은수
+	alert("두번째 받은수 :" + b);
+	// 20
+	//alert(b);
+	// 두수의 합은
+	alert("두수의 합은"+(a+b));
+	// 30 
+	//alert(a+b);
+	return;
+}
+function funname3(a,b) {
+// 	var a=10;
+// 	var b=20;
+	alert(a+b);
+	alert(a-b);
+	alert(a*b);
+	alert(a/b);
+	return;
+}
+function funname4(w) {
+	// 정사각형의 면적을 구해서 그 결과값을 함수호출한곳으로 되돌려 줌
+	return w*w;
+}
+function funname5(r) {
+	// 원의 면적을 구해서 그 결과값을 함수호출한곳으로 되돌려 줌
+	return 3.14*r*r
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js1/test4.html</h1>
+<input type="button" value="자기소개" onclick="funname1()">
+<input type="button" value="두수의 합" onclick="funname2(10,20)">
+<input type="button" value="두수의 사칙연산" onclick="funname3(50,100)">
+<input type="button" value="정사각형의 면적" onclick="alert(funname4(5))">
+<input type="button" value="원의 면적" onclick="alert(funname5(5))">
+</body>
+</html>
+

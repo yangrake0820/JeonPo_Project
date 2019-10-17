@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//내장객체
+//window - location
+//       - history
+//       - document - image,link,layer,...
+//                  - form - text, password, textarea
+//                         - checkbox, radio
+//                         - select - option
+
+// window.document.변수       document.title
+//                      document.bgColor  document.fgColor
+//    document.linkColor document.alinkColor document.vlinkColor
+// window.document.함수()  document.open() document.close()
+//                        document.write()
+function fun1() {
+	alert("문서제목 : "+document.title);
+	alert("문서배경색 : "+document.bgColor);
+	alert("문서글자색 : "+document.fgColor);
+}
+function fun2() {
+	// yellow pink
+	document.bgColor="yellow";
+}
+function fun3(a) {
+	document.bgColor=a;
+}
+//함수()
+document.write("문서에 출력");
+</script>
+</head>
+<body>
+<h1>WebCotent/js2/test4.html</h1>
+<input type="button" value="문서정보확인" onclick="fun1()">
+<input type="button" value="문서배경색변경" onclick="fun2()">
+<input type="radio" name="ra" value="pink" onclick="fun3('pink')">pink색
+<input type="radio" name="ra" value="green" onclick="fun3('green')">green색
+<input type="radio" name="ra" value="blue" onclick="fun3('blue')">blue색
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 자주사용하는 명령들의 묶음 => 함수
+// 함수 사용=> 함수이름 호출
+/* 
+ function 함수이름() {
+	// 자주사용하는 명령들
+ }
+*/
+function funname() {
+	alert('메시지1');
+	alert('메시지2');
+	alert('메시지3');
+	alert('메시지4');
+	alert('메시지5');
+	//함수 호출한 곳을 되돌아감,생략가능
+	return;
+}
+function funname2(a) {
+	alert("받은 동전은");
+	alert(a);
+	alert("원 입니다");
+	return;
+}
+function funname3() {
+	alert("funname3() 함수실행");
+	alert("리턴값 있음");
+	return "음료수";
+}
+function funname4(x,y) {
+	alert("동전 받음")
+	alert(x+y);
+	alert("원 사용");
+	alert("음료수 리턴");
+	return "사이다";
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js1/test3.html</h1>
+<input type="button" value="버튼" onclick="funname()">
+<input type="button" value="버튼2" onclick="funname2(500)">
+<input type="button" value="버튼3" onclick="alert(funname3())">
+<input type="button" value="버튼4" onclick="alert(funname4(700,300))">
+</body>
+</html>
+

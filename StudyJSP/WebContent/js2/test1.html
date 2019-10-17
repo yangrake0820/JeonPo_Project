@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 내장객체
+// window - location
+//        - history
+//        - document - image,link,layer,...
+//                   - form - text, password, textarea
+//                          - checkbox, radio
+//                          - select - option
+
+function fun1() {
+	//웹브라우저 윈도우 창 열기
+// 	window.변수          window.status   window.opener
+// 	window.함수()   window.open()   window.close()
+// 	window.open("열고자하는 사이트주소,문서이름","창이름","옵션");
+	window.open("http://www.naver.com","naver","width=300,height=200,left=100,top=100,resizable=yes,scrollbars=yes");
+}
+function fun2() {
+	window.close();
+}
+function fun3() {
+	// test1_open.html 파일 만들기 -> 문서안에 창닫기 버튼 만들기
+	// test1_open.html 창열기
+	window.open("test1_open.html","","width=200,height=100");
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js2/test1.html</h1>
+<input type="button" value="창열기" onclick="fun1()">
+<input type="button" value="창닫기" onclick="fun2()">
+<input type="button" value="창열고 창닫기" onclick="fun3()">
+</body>
+</html>

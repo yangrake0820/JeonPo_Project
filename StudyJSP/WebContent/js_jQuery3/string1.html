@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax('string1.jsp',{
+			success:function(data){
+			//	alert(data);
+			// body 태그  뒤부분에 data를 추가
+// 			$('body').append(data);
+			}
+		});
+		// 버튼을 클릭했을때 
+		// string1.jsp 내용를 가져와서 table태그 뒤부분에 추가
+		$('#btn').click(function(){
+			$.ajax('string1.jsp',{
+				success:function(data){
+					$('table').append("<tr><td>"+data+"</td></tr>");
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<h1>모바일화면 js_jQuery3/string1.html</h1>
+<input type="button" name="btn" id="btn" value="버튼">
+<table border="1">
+<tr><td>내용</td></tr>
+</table>
+</body>
+</html>

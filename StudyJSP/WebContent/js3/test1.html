@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//window - location
+//       - history
+//       - document - image,link,layer,...
+//                  - form - text, password, textarea
+//                         - checkbox, radio
+//                         - select - option
+
+// window.document.forms[0].변수
+//        document.forms[0].action  document.forms[0].method
+// window.document.forms[0].함수()
+//        document.forms[0].submit()  document.forms[0].reset()
+function fun1() {
+	alert(document.forms[0].action);
+	alert(document.forms[0].method);
+	//전송 submit() 
+	document.forms[0].submit();
+}
+function fun2() {
+	// action  b.jsp 변경  /   method   get 변경  /  전송submit()
+// 	document.forms[0].action="b.jsp";
+// 	document.forms[0].method="get";
+// 	document.forms[0].submit();
+	document.fr.action="b.jsp";
+	document.fr.method="get";
+	document.fr.submit();
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js3/test1.html</h1>
+<form action="a.jsp" method="post" name="fr">
+아이디 <input type="text" name="id"><br>
+<input type="button" value="폼정보" onclick="fun1()">
+<input type="button" value="폼변경 전송" onclick="fun2()">
+<input type="submit" value="전송">
+<input type="reset" value="초기화">
+</form>
+</body>
+</html>

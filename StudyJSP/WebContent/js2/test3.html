@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//내장객체
+//window - location
+//       - history
+//       - document - image,link,layer,...
+//              - form - text, password, textarea
+//                     - checkbox, radio
+//                     - select - option
+
+// window.history.변수            history.length 
+// window.history.함수()    history.back()  history.forward()
+//                         history.go(-1)  history.go(1)
+
+function fun1() {
+	alert("방문기록개수 : "+history.length);
+}
+function fun2() {
+	//방문기록중에 바로 뒤로이동 
+	alert("뒤로이동");
+	history.back();
+}
+function fun3() {
+	//방문기록중에 바로 앞으로이동
+	history.forward();
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js2/test3.html</h1>
+<input type="button" value="방문기록개수" onclick="fun1()">
+<input type="button" value="뒤로이동" onclick="fun2()">
+<input type="button" value="앞으로이동" onclick="fun3()">
+</body>
+</html>

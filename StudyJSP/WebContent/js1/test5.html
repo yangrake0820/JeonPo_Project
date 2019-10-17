@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+// 내장함수
+// function alert(a) {
+// 	// 창을 만들고
+// 	// 창안에 a변수 있는 내용을 출력
+// 	// 창을 화면에 보이기
+// }
+// alert("내장함수 호출");
+
+// var a=confirm("회원가입할려면 확인 단추를 누르세요");
+// alert(a);  //확인 true / 취소 false
+// //조건문 
+// // 조건결과 true,false
+// if(a){
+// 	// true이면 실행문
+// 	alert("회원가입축하합니다.");
+// }else{
+// 	// false이면 실행문
+// 	alert("다음에 가입해주세요");
+// }
+
+//문자인식
+var b=prompt("값을 입력하세요","입력");
+alert(b);
+// alert(b+100); //문자와 숫자 연결
+// 문자 -> 정수숫자 함수
+// alert(parseInt(b)+100);
+//문자 -> 실수숫자 함수
+// alert(parseFloat(b)+100);
+// isNaN() 함수 is Not a Number  숫자가 아니냐, 문자냐 true, 아니면 false
+alert(isNaN(b));
+
+// 입력 받은 값이 문자이면 그래로 출력, 숫자이면  숫자+100 출력
+// if  isNaN()  parseInt()
+if(isNaN(b)){
+	alert(b);
+}else{
+	alert(parseInt(b)+100);
+}
+
+</script>
+</head>
+<body>
+<h1>WebCotent/js1/test5.html</h1>
+</body>
+</html>

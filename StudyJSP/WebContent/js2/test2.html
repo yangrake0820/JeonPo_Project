@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//내장객체
+//window - location
+//     - history
+//     - document - image,link,layer,...
+//                - form - text, password, textarea
+//                       - checkbox, radio
+//                       - select - option
+
+// location : 웹브라우저 주소줄 내장객체, window생략가능
+// window.location.변수    location.href  location.protocol
+//        location.hostname location.port location.host
+// window.location.함수() location.reload()  location.replace()
+function fun1() {
+	alert("주소 : "+location.href);
+	alert("통신규약 : "+location.protocol);
+	alert("서버 : "+location.hostname);
+	alert("포트번호 : "+location.port);
+	alert("서버포트번호 : "+location.host);
+}
+function fun2() {
+	// 주소를 test1.html 변경 => 문서이동
+	alert("주소 : "+location.href);
+	alert("test1.html이동");
+	location.href="test1.html";
+	//a="안녕하세요";
+}
+function fun3() {
+	alert("네이버로 이동");
+	location.href="http://www.naver.com";
+}
+function fun4() {
+	//새로고침 함수호출
+	location.reload();
+}
+function fun5() {
+	// 문서를 새로 불러옴(바꿈)
+	// location.replace()
+	location.replace("test1.html");
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js2/test2.html</h1>
+<input type="button" value="주소정보확인" onclick="fun1()">
+<input type="button" value="test1.html문서로이동" onclick="fun2()">
+<input type="button" value="네이버로 이동" onclick="fun3()">
+<input type="button" value="새로고침" onclick="fun4()">
+<input type="button" value="문서새로불러옴" onclick="fun5()">
+<a href="test1.html">test1.html문서로 하이퍼링크</a>
+</body>
+</html>

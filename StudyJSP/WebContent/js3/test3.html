@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//window - location
+//       - history
+//       - document - image,link,layer,...
+//                  - form - text, password, textarea
+//                         - checkbox, radio
+//                         - select - option
+
+// window.document.폼이름.라디오이름[0].변수 
+//        document.fr.ra[0].type    document.fr.ra[0].name
+//        document.fr.ra[0].value   document.fr.ra[0].checked
+//                             체크가 되어있으면 true/안되어있으면 false
+// window.document.폼이름.라디오이름[0].함수()
+//        document.fr.ra[0].focus()
+//        document.fr.ra[0].blur()
+//        document.fr.ra[0].click()
+function fun1() {
+	alert(document.fr.ra[0].type);
+	alert(document.fr.ra[0].name);
+	alert(document.fr.ra[0].value);
+	alert(document.fr.ra[0].checked);
+	document.fr.ra[0].focus();
+	document.fr.ra[0].blur();
+	document.fr.ra[0].click();
+}
+function fun2() {
+	//첫번째 라디오박스 체크되어있지 않으면 동시에 두번째 라디오박스 체크되어있지 않으면
+	if(document.fr.ra[0].checked==false && document.fr.ra[1].checked==false){
+		// 라디오박스 체크하세요
+		alert("라디오박스 체크하세요");
+		// 첫번째 라디오박스 포커스
+		document.fr.ra[0].focus();
+		// 함수 호출한 곳으로 되돌아감
+		return;
+	}
+	// 첫번째 체크박스 체크되지있지 않으면 동시에 두번째 체크박스 체크되지있지 않으면 동시에 세번째 체크박스 체크되지있지 않으면
+	if(document.fr.ch[0].checked==false && document.fr.ch[1].checked==false && document.fr.ch[2].checked==false){
+		// 체크박스 체크하세요
+		alert("체크박스 체크하세요");
+		// 체크박스 포커스
+		document.fr.ch[0].focus();
+		// 함수 호출한 곳으로 되돌아감
+		return;
+	}
+	// a.jsp submit() 전송
+	document.fr.submit();
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js3/test2.html</h1>
+<form action="a.jsp" method="post" name="fr">
+라디오박스 :<input type="radio" name="ra" value="남">남자
+<input type="radio" name="ra" value="여">여자
+<input type="button" value="라디오박스 정보확인" onclick="fun1()">
+<input type="button" value="라디오박스 제어" onclick="fun2()"><br>
+체크박스 : <input type="checkbox" name="ch" value="여행">여행
+<input type="checkbox" name="ch" value="독서">독서
+<input type="checkbox" name="ch" value="게임">게임
+</form>
+</body>
+</html>

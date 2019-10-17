@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//window - location
+//         - history
+//         - document - image,link,layer,...
+//                    - form - text, password, textarea
+//                           - checkbox, radio
+//                           - select - option
+
+// window.document.폼태그이름.텍스트상자이름.변수
+//        document.fr.id.type  document.fr.id.value
+// window.document.폼태그이름.텍스트상자이름.함수()
+//        document.fr.id.focus()
+//        document.fr.id.blur()
+//        document.fr.id.select()
+function fun1() {
+	alert(document.fr.id.type);
+	alert(document.fr.id.value);
+	document.fr.id.focus();
+	document.fr.id.blur();
+	document.fr.id.value="값변경";
+	document.fr.id.select();
+}
+function fun2() {
+	// id   value 출력
+	//alert(document.fr.id.value);
+	
+	// 아이디상자의 글자 길이
+// 	alert(document.fr.id.value);
+	// 문자열의 길이 저장하는 변수 length
+// 	alert(document.fr.id.value.length);
+	if(document.fr.id.value.length==0){
+		alert("아이디 입력하세요");
+		//아이디 상자에 포커스 깜박
+		document.fr.id.focus();
+		return;
+	}
+	
+	// 아이디 길이가 4자 아니면   "아이디길이는 4자입니다." 아이디 상자에 포커스 깜박
+	if(document.fr.id.value.length != 4){
+		alert("아이디길이는 4자입니다.");
+		document.fr.id.focus();
+		return;
+	}
+	
+	
+	// document.fr.id.value 비어있으면, "" 공백 같으면
+// 	if(document.fr.id.value==""){
+// 		alert("아이디 입력하세요");
+// 		//아이디 상자에 포커스 깜박
+// 		document.fr.id.focus();
+// 		return;
+// 	}
+	if(document.fr.pass.value==""){
+		// document.fr.pass.value 비어있으면, "" 공백 같으면
+		// "비밀번호 입력하세요"
+		alert("비밀번호 입력하세요");
+		// 비밀번호 상자에 포커스 깜박
+		document.fr.pass.focus();
+		return;
+	}
+	// 비밀번호의 길이 4~7자가 아니면   "비밀번호는 4~7자입니다." 비밀번호 상자에 포커스 깜박
+// 	if(document.fr.pass.value.length < 4 || document.fr.pass.value.length > 7){
+// 		alert("비밀번호는 4~7자입니다");
+// 		document.fr.pass.focus();
+// 		return;
+// 	}
+	var a=document.fr.pass.value.length;
+	if(!( a >= 4 && a <= 7)){
+		alert("비밀번호는 4~7자입니다");
+		document.fr.pass.focus();
+		return;
+	}
+	
+	
+	if(document.fr.tx.value==""){
+		// document.fr.tx.value 비어있으면, "" 공백 같으면
+		// "자기소개 입력하세요"
+		alert("자기소개 입력하세요");
+		// 자기소개 상자에 포커스 깜박
+		document.fr.tx.focus();
+		return;
+	}
+		// 전송 submit()
+		document.fr.submit();
+	return;
+}
+</script>
+</head>
+<body>
+<h1>WebCotent/js3/test2.html</h1>
+<form action="a.jsp" method="post" name="fr">
+아이디 <input type="text" name="id"><br>
+비밀번호 <input type="password" name="pass"><br>
+자기소개 <textarea name="tx" rows="5" cols="10"></textarea>
+<input type="button" value="아이디상자 정보" onclick="fun1()">
+<input type="button" value="텍스트상자 제어" onclick="fun2()">
+<input type="button" value="텍스트상자 제어2" onclick="fun3()">
+</form>
+</body>
+</html>

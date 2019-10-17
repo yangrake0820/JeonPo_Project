@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$('#btn').click(function() {
+		$.ajax('xml.jsp',{
+			success:function(sdata){
+				$(sdata).find('person').each(function(){
+					var id = $(this).find('id').text();
+					var pass = $(this).find('pass').text();
+					var name = $(this).find('name').text();
+						$('table').append("<tr><td>"+id+"</td><td>"+pass+"</td><td>"+name+"</td></tr>");					
+				});
+			}
+		});
+	});
+});
+</script>
+
+</head>
+<body>
+<h1>모바일 화면 js_jQuery3/xml.html</h1>
+<input type="button" name="btn" id="btn" value="버튼">
+<table border=1>
+<tr><td>아이디</td><td>패스워드</td><td>이름</td></tr>
+</table>
+</body>
+</html>

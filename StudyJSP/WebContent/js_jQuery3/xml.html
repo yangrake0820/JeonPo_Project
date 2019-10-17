@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.4.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax('xml.jsp',{
+			success:function(sdata){
+				$(sdata).find('person').each(function(){
+					var id=$(this).find('id').text();
+					var pass=$(this).find('pass').text();
+					var name=$(this).find('name').text();
+					$('body').append(id+","+pass+","+name+"<br>");
+				});
+			}
+		});
+		// 버튼 클릭시 table태그에 xml데이터 가져와서 출력
+		$('#btn').click(function(){
+			$.ajax('xml.jsp',{
+				success:function(sdata){
+					$(sdata).find('person').each(function(){
+						var id=$(this).find('id').text();
+						var pass=$(this).find('pass').text();
+						var name=$(this).find('name').text();
+						$('table').append("<tr><td>"+id+"</td><td>"+pass+"</td><td>"+name+"</td></tr>");
+					});
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<h1>모바일화면 js_jQuery3/xml.html</h1>
+<input type="button" name="btn" id="btn" value="버튼">
+<table border="1">
+<tr><td>아이디</td><td>비밀번호</td><td>이름</td></tr>
+</table>
+</body>
+</html>
+
